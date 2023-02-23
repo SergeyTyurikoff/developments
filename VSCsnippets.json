@@ -1,0 +1,2183 @@
+{
+	// Комментарии
+	"Комментарий CSS": {
+		"prefix": "cc",
+		"scope": "css",
+		"body": [
+			"/* -------- BEGIN: $1 -------- */",
+			"$0",
+			"/* -------- END: $1 -------- */",
+		],
+		"description": "Комментарий CSS"
+	},
+	"Комментарий HTML": {
+		"prefix": "cc",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: $1 _____ -->",
+			"$0",
+			"<!-- _____ END: $1 _____ -->",
+		],
+		"description": "Комментарий HTML"
+	},
+	"Комментарий JS": {
+		"prefix": "cc",
+		"scope": "javascript",
+		"body": [
+			"/* -------- BEGIN: $1 -------- */",
+			"$0",
+			"/* -------- END: $1 -------- */",
+		],
+		"description": "Комментарий JS"
+	},
+	"Комментарий PHP": {
+		"prefix": "cc",
+		"scope": "php",
+		"body": [
+			"/* -------- BEGIN: $1 -------- */",
+			"$0",
+			"/* -------- END: $1 -------- */",
+		],
+		"description": "Комментарий PHP"
+	},
+	// проверка почта
+	"проверка почта": {
+		"prefix": "pattern",
+		"scope": "html",
+		"body": [
+			"pattern=\"^[\\w]{1,}[\\w.+-]{0,}@[\\w-]{1,}([.][a-zA-Z]{1,}|[.][\\w-]{2,}[.][a-zA-Z]{2,})$\""
+		],
+		"description": "проверка почта"
+	},
+	// ------------------ HTML --------------------
+
+	// wrap
+	"wrap": {
+		"prefix": ".w",
+		"scope": "html",
+		"body": [
+			"<div class=\"wrap\">",
+    		"   $0",
+			"</div>"
+		],
+		"description": "wrap"
+	},
+	// wrap-css
+	"wrap-css": {
+		"prefix": "wrap",
+		"scope": "css",
+		"body": [
+			".wrap {",
+			"    margin-right: auto;",
+			"    margin-left: auto;",
+			"    padding-left: 15px;",
+			"    padding-right: 15px",
+			"}",
+			"@media (min-width: 768px) {",
+			"    .wrap {",
+			"        width: 750px",
+			"    }",
+			"}",
+			"@media (min-width: 992px) {",
+			"    .wrap {",
+			"        width: 970px",
+			"    }",
+			"}",
+			"@media (min-width: 1200px) {",
+			"    .wrap {",
+			"        width: 1170px",
+			"    }",
+			"}",
+		],
+		"description": "wrap-css"
+	},
+	// wrap-xl
+	"wrap-xl": {
+		"prefix": "wxl",
+		"scope": "html",
+		"body": [
+			"<div class=\"wrap-xl\">",
+			"   $0",
+			"</div>"
+		],
+		"description": "wrap-xl"
+	},
+	// wrap-xl-css
+	"wrap-xl-css": {
+		"prefix": "wxl",
+		"scope": "css",
+		"body": [
+			".wrap-xl {",
+			"    margin-right: auto;",
+			"    margin-left: auto;",
+			"    padding-left: 15px;",
+			"    padding-right: 15px",
+			"}",
+			"@media (min-width: 576px) {",
+			"    .wrap-xl {",
+			"        max-width: 540px;",
+			"    }",
+			"}",
+			"@media (min-width: 768px) {",
+			"    .wrap-xl {",
+			"        max-width: 720px;",
+			"    }",
+			"}",
+			"@media (min-width: 992px) {",
+			"    .wrap-xl {",
+			"        max-width: 960px;",
+			"    }",
+			"}",
+			"@media (min-width: 1200px) {",
+			"    .wrap-xl {",
+			"        max-width: 1140px;",
+			"    }",
+			"}",
+			"@media (min-width: 1400px) {",
+			"    .wrap-xl {",
+			"        max-width: 1320px;",
+			"    }",
+			"}",
+		],
+		"description": "wrap-xl-css"
+	},
+	"container-div": {
+		"prefix": ".c",
+		"scope": "html",
+		"body": [
+			"<div class=\"container\">",
+    		"   $0",
+			"</div>"
+		],
+		"description": "container-div"
+	},
+
+	"container-fluid-div": {
+		"prefix": ".cf",
+		"scope": "html",
+		"body": [
+			"<div class=\"container-fluid\">",
+    		"   $0",
+			"</div>"
+		],
+		"description": "container-fluid-div"
+	},
+	// class
+	"class": {
+		"prefix": "cs",
+		"scope": "html",
+		"body": [
+			"class=\"$0\""
+		],
+		"description": "class"
+	},
+	// style
+	"style": {
+		"prefix": "st",
+		"scope": "html",
+		"body": [
+			"style=\"$0\""
+		],
+		"description": "style"
+	},
+	// неразрывный пробел
+	"неразрывный пробел": {
+		"prefix": "&n",
+		"scope": "html",
+		"body": [
+			"&nbsp;"
+		],
+		"description": "неразрывный пробел"
+	},
+	// тире
+	"тире": {
+		"prefix": "-",
+		"scope": "html",
+		"body": [
+			"—"
+		],
+		"description": "тире"
+	},
+	// ёлочки
+	"ёлочки": {
+		"prefix": "t",
+		"scope": "html",
+		"body": [
+			"«$0»"
+		],
+		"description": "ёлочки"
+	},
+
+	//
+	// target blank
+	"target blank": {
+		"prefix": "tar",
+		"scope": "html",
+		"body": [
+			"target=\"_blank\""
+		],
+		"description": "target blank"
+	},
+
+	"Open Graph": {
+		"prefix": "metaog",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: Open Graph разметка _____ -->",
+			"<meta property=\"og:url\" content=\"https://vedatng.com/english/\"/>",
+			"<meta property=\"og:title\" content=\"VedaEducation\" />",
+			"<meta property=\"og:type\" content=\"website\" />",
+			"<meta property=\"og:description\" content=\"fdsfsdfs\"/>",
+			"<meta property=\"og:image\" content=\"https://vedatng.com/img/vedaeducation-logo-og.jpg\" />",
+			"<meta property=\"og:image:width\" content=\"1080\"/>",
+			"<meta property=\"og:image:height\" content=\"1080\"/>",
+			"<meta property=\"og:image:alt\" content=\"VedaEducation logo\" />",
+			"<!-- _____ END: Open Graph разметка _____ -->"
+		],
+		"description": "Open Graph"
+	},
+
+	// ------------------ CSS --------------------
+
+	// display grid column
+	"display grid column": {
+		"prefix": "dgc",
+		"scope": "css",
+		"body": [
+			"display: grid;",
+			"grid-template-columns: repeat(2, 1fr);",
+			"gap: 20px;",
+			"grid-auto-rows: 1fr;",
+		],
+		"description": "display grid column"
+	},
+
+	// flex-dir column
+	"flex-dir column": {
+		"prefix": "fdc",
+		"scope": "css",
+		"body": [
+			"flex-direction: column;"
+		],
+		"description": "flex-dir column"
+	},
+	// order
+	"order": {
+		"prefix": "o",
+		"scope": "css",
+		"body": [
+			"order: $0;"
+		],
+		"description": "order"
+	},
+
+	// text align left
+	"text align left": {
+		"prefix": "tal",
+		"scope": "css",
+		"body": [
+			"text-align: left;"
+		],
+		"description": "text align left"
+	},
+
+	// text align center
+	"text align center": {
+		"prefix": "tac",
+		"scope": "css",
+		"body": [
+			"text-align: center;"
+		],
+		"description": "text align center"
+	},
+
+	// text align right
+	"text align right": {
+		"prefix": "tar",
+		"scope": "css",
+		"body": [
+			"text-align: right;"
+		],
+		"description": "text align right"
+	},
+
+	// background url
+	"background url": {
+		"prefix": "bgu",
+		"scope": "css",
+		"body": [
+			"background: url($0) no-repeat center;"
+		],
+		"description": "background url"
+	},
+
+	// background color
+	"background color": {
+		"prefix": "bgc",
+		"scope": "css",
+		"body": [
+			"background: ${0:white};"
+		],
+		"description": "background color"
+	},
+
+	// hover
+	"hover": {
+		"prefix": ":",
+		"scope": "css",
+		"body": [
+			":hover {",
+			"   $0",
+			"}"
+		],
+		"description": "hover"
+	},
+
+	// scroll design
+	"scroll design": {
+		"prefix": "scroll-design",
+		"scope": "css",
+		"body": [
+			".$0{",
+			"   overflow-y: auto;",
+			"}",
+			".$0::-webkit-scrollbar {",
+			"   width: 10px;",
+			"}",
+			".$0::-webkit-scrollbar-track {",
+			"   box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);",
+			"}",
+			".$0::-webkit-scrollbar-thumb {",
+			"   background-color: #e84838;",
+			"   outline: 1px solid #e84838;",
+			"}"
+		],
+		"description": "scroll design"
+	},
+
+	// transform scale
+	"transform scale": {
+		"prefix": "trsc",
+		"scope": "css",
+		"body": [
+			"transform: scale(1.02);"
+		],
+		"description": "transform scale"
+	},
+
+	// flex 3
+	"flex-3": {
+		"prefix": "f3",
+		"scope": "css",
+		"body": [
+			"display: flex;",
+			"justify-content: center;",
+			"align-items: center;",
+		],
+		"description": "flex-3"
+	},
+
+	// media bootstrap
+	"@media 1200+": {
+		"prefix": "m13",
+		"scope": "css",
+		"body": [
+			"@media (min-width: 1200px) {",
+			"  $0",
+			"}"
+		],
+		"description": "@media 1200+"
+	},
+	"@media 0 - 1199": {
+		"prefix": "m12",
+		"scope": "css",
+		"body": [
+			"@media (max-width: 1199px) {",
+			"  $0",
+			"}"
+		],
+		"description": "@media 0 - 1199"
+	},
+	"@media 0 - 991": {
+		"prefix": "m9",
+		"scope": "css",
+		"body": [
+			"@media (max-width: 991px) {",
+			"  $0",
+			"}"
+		],
+		"description": "@media 0 - 991"
+	},
+	"@media 0 - 767": {
+		"prefix": "m7",
+		"scope": "css",
+		"body": [
+			"@media (max-width: 767px) {",
+			"  $0",
+			"}"
+		],
+		"description": "@media 0 - 767"
+	},
+	"@media 0 - 575": {
+		"prefix": "m5",
+		"scope": "css",
+		"body": [
+			"@media (max-width: 575px) {",
+			"  $0",
+			"}"
+		],
+		"description": "@media 0 - 575"
+	},
+
+	// Selection
+	"selection": {
+		"prefix": "sel",
+		"scope": "css",
+		"body": [
+			"*::selection {",
+			"  background: ${0:rgb(96, 151, 79)};",
+			"  color: white;",
+			"}"
+		],
+		"description": "selection"
+	},
+
+
+	// smooth-scroll
+	"smooth-scroll": {
+		"prefix": "smooth",
+		"scope": "javascript",
+		"body": [
+			"<!-- _____ BEGIN: smooth-scroll _____ -->",
+            "document.querySelectorAll('a[href^=\"#\"').forEach(link => {",
+			"",
+            "    link.addEventListener('click', function (e) {",
+            "        e.preventDefault();",
+			"",
+            "        let href = this.getAttribute('href').substring(1);",
+			"",
+            "        const scrollTarget = document.getElementById(href);",
+			"",
+            "        // const topOffset = document.querySelector('.scrollto').offsetHeight;",
+            "        const topOffset = 0; // если не нужен отступ сверху ",
+            "        const elementPosition = scrollTarget.getBoundingClientRect().top;",
+            "        const offsetPosition = elementPosition - topOffset;",
+			"",
+            "        window.scrollBy({",
+            "            top: offsetPosition,",
+            "            behavior: 'smooth'",
+            "        });",
+            "    });",
+            "});",
+			"<!-- _____ END: smooth-scroll _____ -->"
+		],
+		"description": "smooth-scroll"
+	},
+
+	// change url
+	"change url": {
+		"prefix": "scj",
+		"scope": "html",
+		"body": [
+			"function setLocation(curLoc){",
+			"   try {",
+			"   history.pushState(null, null, curLoc);",
+			"   return;",
+			"   } catch(e) {}",
+			"   location.hash = '#' + curLoc;",
+			"}"
+		],
+		"description": "change url"
+	},
+
+	// object-fit-cover
+	"object-fit-cover": {
+		"prefix": "ofcv",
+		"scope": "css",
+		"body": [
+			"object-fit: cover;"
+		],
+		"description": "object-fit-cover"
+	},
+
+	// object-fit-contain
+	"object-fit-contain": {
+		"prefix": "ofco",
+		"scope": "css",
+		"body": [
+			"object-fit: contain;"
+		],
+		"description": "object-fit-contain"
+	},
+
+
+
+	// font
+	"font": {
+		"prefix": "ft",
+		"scope": "css",
+		"body": [
+			"font: ${1:1.375rem}/${2:110%} ${3:Roboto-Regular};$0"
+		],
+		"description": "font"
+	},
+	// calc multipl
+	"calc multipl": {
+		"prefix": "calcm",
+		"scope": "css",
+		"body": [
+			"calc(${1:20px} * var(--adaptive-multiplier-0${2:75}x))",
+		],
+		"description": "calc multipl"
+	},
+	// font-face
+	"font-face": {
+		"prefix": "ff",
+		"scope": "css",
+		"body": [
+			"@font-face {",
+			"   font-family: \"$1\";",
+			"   src: url(\"$2.eot\") format(\"eot\"), ",
+			"   url(\"$2.woff\") format(\"woff\"), ",
+			"   url(\"$2.woff2\") format(\"woff2\"), ",
+			"   url(\"$2.ttf\") format(\"truetype\");",
+			"   font-weight: ${3:normal};",
+			"   font-style: ${4:normal};",
+			"}",
+			"",
+			"$0"
+		],
+		"description": "font-face"
+	},
+
+	// picture
+	"picture-webp": {
+		"prefix": "pw",
+		"scope": "html",
+		"body": [
+			"<picture>",
+			"   <source srcset=\"$1\" type=\"image/webp\">",
+			"   <source srcset=\"$2\" type=\"image/jpeg\">",
+			"   <img src=\"$2\" alt=\"$0\">",
+			"</picture>",
+		],
+		"description": "picture-webp"
+	},
+	// picture-adaptive
+	"picture-adaptive": {
+		"prefix": "pa",
+		"scope": "html",
+		"body": [
+			"<picture>",
+			"    <source srcset=\"$2\" type=\"image/${3:jpeg}\" media=\"(min-width: 768px)\">",
+			"    <source srcset=\"$1\" type=\"image/${3:jpeg}\" media=\"(max-width: 767px)\">",
+			"    <img src=\"$2\" alt=\"$0\">",
+			"</picture>"
+		],
+		"description": "picture-adaptive"
+	},
+	// transition
+	"transition": {
+		"prefix": "tr",
+		"scope": "css",
+		"body": [
+			"transition: all ${0:1}s ease-in-out;"
+		],
+		"description": "transition"
+	},
+
+	// unda
+	"unda": {
+		"prefix": "unda",
+		"scope": "css",
+		"body": [
+			".unda {",
+			"   text-decoration: none;",
+			"   background-image: linear-gradient(currentColor, currentColor);",
+			"   background-position: ${0:0%} 100%; /* 0% 100% - слева, 50% 100% - из середины */",
+			"   background-repeat: no-repeat;",
+			"   background-size: 0% 2.6px;",
+			"   transition: background-size 1s;",
+			"}",
+			"",
+			".unda:hover {",
+			"   text-decoration: none;",
+			"   background-size: 100% 2.6px;",
+			"}",
+		],
+		"description": "unda"
+	},
+	// ------------------ JS --------------------
+	"const": {
+		"prefix": "c",
+		"scope": "javascript",
+		"body": [
+			"const $1 = $0;"
+		],
+		"description": "const"
+	},
+	"const-several": {
+		"prefix": "cse",
+		"scope": "javascript",
+		"body": [
+			"const $1 = $2,",
+			"     $3 = $0",
+		],
+		"description": "const-several"
+	},
+	"let": {
+		"prefix": "l",
+		"scope": "javascript",
+		"body": [
+			"let $1 = $0;"
+		],
+		"description": "const"
+	},
+	"querySelector": {
+		"prefix": "qq",
+		"scope": "javascript",
+		"body": [
+			"const $0 = document.querySelector('.$0');"
+		],
+		"description": "querySelector"
+	},
+	"querySelector several": {
+		"prefix": "qqs",
+		"scope": "javascript",
+		"body": [
+			"$1 = document.querySelector('.$1')${2:,}",
+			"$0",
+		],
+		"description": "querySelector"
+	},
+	"querySelectorAll": {
+		"prefix": "qa",
+		"scope": "javascript",
+		"body": [
+			"const $0 = document.querySelectorAll('.$0');"
+		],
+		"description": "querySelectorAll"
+	},
+	"addEventListener": {
+		"prefix": "e",
+		"scope": "javascript",
+		"body": [
+			"$1.addEventListener('${2:click}', (e) => {",
+			"    $0",
+			"});",
+		],
+		"description": "addEventListener"
+	},
+	// Преобразовать NodeList в Array
+	"Преобразовать NodeList в Array": {
+		"prefix": "nodelistToArray",
+		"scope": "javascript",
+		"body": [
+            "const $2 = document.querySelectorAll('.$1');",
+            "const arr$0 = Array.from($2);"
+		],
+		"description": "Преобразовать NodeList в Array"
+	},
+	"resize": {
+		"prefix": "resize",
+		"scope": "javascript",
+		"body": [
+			"window.addEventListener('resize', (e) => {",
+			"    $0",
+			"});"
+		],
+		"description": "resize"
+	},
+	"console.log": {
+		"prefix": "clg",
+		"scope": "javascript",
+		"body": [
+			"console.log($0);"
+		],
+		"description": "console.log"
+	},
+	"DOMload": {
+		"prefix": "dl",
+		"scope": "javascript",
+		"body": [
+			"document.addEventListener(\"DOMContentLoaded\", (e) => {",
+			"    $0",
+			"});"
+		],
+		"description": "DOMload"
+	},
+	"Create element": {
+		"prefix": "create",
+		"scope": "javascript",
+		"body": [
+			"$1 = document.createElement('$2');",
+			"$1 = '$1';",
+			"$1.innerHTML = '$3';",
+			"$0"
+		],
+		"description": "Create element"
+	},
+	"Paste element": {
+		"prefix": "createPaste",
+		"scope": "javascript",
+		"body": [
+			"const $1 = document.querySelector('.$1');",
+			"$1.after($0);",
+		],
+		"description": "Paste element"
+	},
+	"insertAdjacentHTML": {
+		"prefix": "adj",
+		"scope": "javascript",
+		"body": [
+			"const $2 = document.querySelector('.$1');",
+			"$2.insertAdjacentHTML('afterend', `",
+			"<div>",
+			"    <ul>",
+			"        <li></li>",
+			"        <li></li>",
+			"        <li></li>",
+			"        <li></li>",
+			"        <li></li>",
+			"    </ul>",
+			"</div>",
+			"`);",
+			"$0",
+		],
+		"description": "insertAdjacentHTML"
+	},
+
+	// Анонимная самовызывающаяся функция
+	"self-invoking function": {
+		"prefix": "anon",
+		"scope": "javascript",
+		"body": [
+			"(function () {",
+			"    $0",
+			"}());"
+		],
+		"description": "Анонимная самовызывающаяся функция"
+	},
+
+	// Асинхронная анонимная самовызывающаяся функция (чтобы использовать await глобально)
+	"self-invoking async function": {
+		"prefix": "async-anon",
+		"scope": "javascript",
+		"body": [
+			"(async () => {",
+			"    $0",
+			"    let response = await fetch('');",
+			"    let user = await response.json();",
+			"})();",
+		],
+		"description": "Асинхронная анонимная самовызывающаяся функция"
+	},
+
+	// func setStylesByClassName
+	"func setStylesByClassName": {
+		"prefix": "fss",
+		"scope": "javascript",
+		"body": [
+			"function setStylesByClassName(classNameOf, styles) {",
+			"    const className = document.querySelectorAll(`.\\${classNameOf}`);",
+			"    className.forEach(elem => {",
+			"        elem.style.cssText += styles;",
+			"    });",
+			"}",
+			"setStylesByClassName(\"$1\", `",
+			"    $0",
+			"`);",
+		],
+		"description": "func setStylesByClassName"
+	},
+
+
+	// function renderBlockByClassName
+	"function renderBlockByClassName": {
+		"prefix": "frbс",
+		"scope": "javascript",
+		"body": [
+			"function renderBlockByClassName (classNamePosition, position, htmlBlock) {",
+			"    const className = document.querySelector(`.\\${classNamePosition}`);",
+			"    className.insertAdjacentHTML(position, htmlBlock);",
+			"}",
+			"",
+			"renderBlockByClassName (",
+			"    '${1:where-is}',",
+			"    '${2:afterend}',",
+			"    `",
+			"    $0",
+			"    `",
+			");",
+		],
+		"description": "function renderBlockByClassName"
+	},
+
+	// function renderBlockBySelector
+	"function renderBlockBySelector": {
+		"prefix": "frbs",
+		"scope": "javascript",
+		"body": [
+			"function renderBlockBySelector (selectorName, position, htmlBlock) {",
+			"    const selector = document.querySelector(`\\${selectorName}`);",
+			"    selector.insertAdjacentHTML(position, htmlBlock);",
+			"}",
+			"",
+			"renderBlockBySelector (",
+			"    '${1:.where-is}',",
+			"    '${2:afterend}',",
+			"    `",
+			"    $0",
+			"    `",
+			");",
+		],
+		"description": "function renderBlockBySelector"
+	},
+
+	// получить координаты элемента от документа
+	"function getCoords": {
+		"prefix": "fgc",
+		"scope": "javascript",
+		"body": [
+			"function getCoords(elem) {",
+			"",
+			"    let box = elem.getBoundingClientRect();",
+			"",
+			"    return {",
+			"        top: box.top + window.pageYOffset,",
+			"        right: box.right + window.pageXOffset,",
+			"        bottom: box.bottom + window.pageYOffset,",
+			"        left: box.left + window.pageXOffset",
+			"    };",
+			"}"
+		],
+		"description": "function getCoords"
+	},
+
+	// function startAnimation
+	"function startAnimation": {
+		"prefix": "fsa",
+		"scope": "javascript",
+		"body": [
+			"function startAnimation(elem, startAnimationClass, endAnimationClass) {",
+			"    if (elem.classList.contains(endAnimationClass)) {",
+			"        elem.classList.remove(endAnimationClass);",
+			"    }",
+			"    elem.classList.add(startAnimationClass);",
+			"}"
+		],
+		"description": "function startAnimation"
+	},
+
+	// function endAnimation
+	"function endAnimation": {
+		"prefix": "fea",
+		"scope": "javascript",
+		"body": [
+			"function endAnimation(elem, startAnimationClass, endAnimationClass) {",
+			"    if (elem.classList.contains(startAnimationClass)) {",
+			"        elem.classList.remove(startAnimationClass);",
+			"    }",
+			"    elem.classList.add(endAnimationClass);",
+			"}"
+		],
+		"description": "function endAnimation"
+	},
+
+	// ------------------ PHP --------------------
+	"php скобки": {
+		"prefix": "php",
+		"scope": "html",
+		"body": [
+			"<?php $0 ?>"
+		],
+		"description": "php скобки"
+	},
+
+	"php var_dump": {
+		"prefix": "vd",
+		"scope": "html",
+		"body": [
+			"<?php if (in_array(\\$_SERVER['REMOTE_ADDR'],['195.211.204.56','90.189.216.73'])) { ?>",
+			"<?php    var_dump(); die(); ?>",
+			"<?php } ?>"
+		],
+		"description": "php var_dump"
+	},
+
+
+	// ------------------ COMPONENTS -------------------
+
+	// popup standart
+	"popup standart": {
+		"prefix": "popups",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: ${1:standart}-popup _____ -->",
+			"<style>",
+			"    .${1:standart}-popup__container {",
+			"        top: 0;",
+			"        left: 0;",
+			"        display: none;",
+			"        opacity: 0;",
+			"        visibility: hidden;",
+			"        position: fixed;",
+			"        width: 100%;",
+			"        height: 100%;",
+			"        background-color: rgba(0, 0, 0, 0.74);",
+			"        z-index: 100;",
+			"    }",
+			"",
+			"    .${1:standart}-popup {",
+			"        max-width: 60%;",
+			"        background: #FFFFFF;",
+			"        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);",
+			"        display: flex;",
+			"        flex-direction: column;",
+			"        position: relative;",
+			"        margin: auto;",
+			"        padding: 20px;",
+			"        overflow-y: auto;",
+			"        max-height: 90%;",
+			"    }",
+			"",
+			"    .${1:standart}-popup::-webkit-scrollbar {",
+			"        width: 10px;",
+			"    }",
+			"",
+			"    .${1:standart}-popup::-webkit-scrollbar-track {",
+			"        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);",
+			"    }",
+			"",
+			"    .${1:standart}-popup::-webkit-scrollbar-thumb {",
+			"        background-color: ${0:#e84838};",
+			"        outline: 0px solid ${0:#e84838};",
+			"    }",
+			"",
+			"    .${1:standart}-popup__btn {",
+			"        cursor: pointer;",
+			"    }",
+			"",
+			"    .${1:standart}-popup__cross {",
+			"        fill: black;",
+			"        width: 20px;",
+			"        height: 20px;",
+			"        position: absolute;",
+			"        right: 8px;",
+			"        top: 7px;",
+			"        cursor: pointer;",
+			"        transition: all .5s;",
+			"    }",
+			"",
+			"    .${1:standart}-popup__cross:hover {",
+			"        transform: rotate(180deg);",
+			"    }",
+			"",
+			"    .fade-in__custom {",
+			"        display: flex;",
+			"        animation: fade-in__custom 1s;",
+			"        opacity: 1;",
+			"        visibility: visible;",
+			"    }",
+			"",
+			"    @keyframes fade-in__custom {",
+			"        from {",
+			"            opacity: 0;",
+			"            visibility: hidden;",
+			"        }",
+			"",
+			"        to {",
+			"            opacity: 1;",
+			"            visibility: visible;",
+			"        }",
+			"    }",
+			"",
+			"    .fade-out__custom {",
+			"        display: flex;",
+			"        animation: fade-out__custom 1s;",
+			"    }",
+			"",
+			"    @keyframes fade-out__custom {",
+			"        from {",
+			"            opacity: 1;",
+			"            visibility: visible;",
+			"        }",
+			"",
+			"        to {",
+			"            opacity: 0;",
+			"            visibility: hidden;",
+			"            display: none;",
+			"        }",
+			"    }",
+			"",
+			"    @media all and (min-width: 1500px) {",
+			"        .${1:standart}-popup {",
+			"            max-width: 1000px;",
+			"        }",
+			"    }",
+			"",
+			"    @media all and (max-width: 991px) {",
+			"        .${1:standart}-popup {",
+			"            width: 80%;",
+			"            max-width: 80%;",
+			"        }",
+			"    }",
+			"",
+			"    @media all and (max-width: 575px) {",
+			"        .${1:standart}-popup {",
+			"            width: 100%;",
+			"            max-width: 100%;",
+			"        }",
+			"    }",
+			"</style>",
+			"<div class=\"${1:standart}-popup__btn\"></div>",
+			"<div class=\"${1:standart}-popup__container\">",
+			"    <div class=\"${1:standart}-popup\">",
+			"        <h3 class=\"${1:standart}-popup__title\">",
+			"            Lorem ipsum dolor sit amet consectetur.",
+			"        </h3>",
+			"        <p class=\"${1:standart}-popup__text\">",
+			"            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, maxime incidunt alias tempora facere sint",
+			"            unde temporibus ex omnis numquam eum quos libero provident quisquam voluptates ad non dicta nemo est",
+			"            necessitatibus. Eligendi expedita sed voluptatibus autem rerum vitae doloribus dolorem nesciunt omnis odit.",
+			"            Beatae velit soluta commodi minus quo!",
+			"        </p>",
+			"        <p class=\"${1:standart}-popup__text\">",
+			"            Lorem ipsum dolor, sit amet consectetur adipisicing elit. A voluptates alias consectetur laboriosam? Eos",
+			"            veritatis consectetur fugit! Culpa velit sequi nulla maxime, magni ipsa quos dignissimos possimus fuga,",
+			"            dolore excepturi.",
+			"        </p>",
+			"        <p class=\"${1:standart}-popup__text\">",
+			"            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias nemo quod dolores earum tempore voluptates",
+			"            consequatur cupiditate voluptatem officiis nesciunt.",
+			"      </p>",
+			"      <p class=\"${1:standart}-popup__text\">",
+			"         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, iure?",
+			"      </p>",
+			"      <svg class=\"${1:standart}-popup__cross\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"",
+			"         xmlns:xlink=\"http://www.w3.org/1999/xlink\">",
+			"         <rect width=\"20\" height=\"20\" fill=\"url(#pattern0)\"></rect>",
+			"            <defs>",
+			"               <pattern id=\"pattern0\" patternContentUnits=\"objectBoundingBox\" width=\"1\" height=\"1\">",
+			"                  <use xlink:href=\"#image0\" transform=\"scale(0.02)\"></use>",
+			"               </pattern>",
+			"               <image id=\"image0\" width=\"50\" height=\"50\"",
+			"                  xlink:href=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAABDElEQVRoge3ZXQqCQBSG4a8WUdIWbbmBtRq70A8kxBw9fzOc96oukvOg6QwCWZZlLdUD6LyHwDRDf/THTwAjgAG+mG6eYZxnKu4G4DUf4APgITba/u6LGd5nZvDEiCGYB0YcwSwxaghmgVFHME2MGYJpYMwRTBLjhmASGHcEO4MJg2BHMOEQrAQTFsH2YMIj2BamGgRbw1SHYMs9xPDzOcJGrajlmVE/E1etAwO4/PleRU1cWmt/7Ajb5qK27k7VYPbcYsNjSp4TYTFHHnbhMGee2GEwEssOd4zk2skNo7EANMdormLNMBZLcXWM5X5CDeOxKRLHeO7sxDARtqcimGZevQGNvAzNsiyL1xcbE8X3wv0coQAAAABJRU5ErkJggg==\">",
+			"               </image>",
+			"         </defs>",
+			"      </svg>",
+			"   </div>",
+			"</div>",
+			"<script>",
+			"    (function () {",
+			"        document.addEventListener('DOMContentLoaded', () => {",
+			"",
+			"        function launchPopup(popupBtnClass, popupContainerClass, popupCrossClass, bodyTag, fadeInClass, fadeOutClass) {",
+			"            const popupBtn = document.querySelector(`.\\${popupBtnClass}`),",
+			"                  popupContainer = document.querySelector(`.\\${popupContainerClass}`),",
+			"                  popupCross = document.querySelector(`.\\${popupCrossClass}`),",
+			"                  body = document.querySelector(`\\${bodyTag}`),",
+			"                  fadeIn = `\\${fadeInClass}`,",
+			"                  fadeOut = `\\${fadeOutClass}`;",
+			"",
+			"            function fadeInPopup(popupContainer, fadeInClass, fadeOutClass, body) {",
+			"                if (popupContainer.classList.contains(fadeOutClass)) {",
+			"                    popupContainer.classList.remove(fadeOutClass);",
+			"                }",
+			"                    popupContainer.classList.add(fadeInClass);",
+			"                    body.style.overflow = 'hidden';",
+			"                }",
+			"",
+			"            function fadeOutPopup(popupContainer, fadeInClass, fadeOutClass, body) {",
+			"                if (popupContainer.classList.contains(fadeInClass)) {",
+			"                    popupContainer.classList.remove(fadeInClass);",
+			"                }",
+			"                    popupContainer.classList.add(fadeOutClass);",
+			"                    body.style.overflow = 'visible';",
+			"                }",
+			"",
+			"                popupBtn.addEventListener('click', (e) => {",
+			"                    fadeInPopup(popupContainer, fadeIn, fadeOut, body);",
+			"                });",
+			"",
+			"                popupCross.addEventListener('click', (e) => {",
+			"                    fadeOutPopup(popupContainer, fadeIn, fadeOut, body);",
+			"                });",
+			"",
+			"                popupContainer.addEventListener('click', function (e) {",
+			"                    if (e.target == this) {",
+			"                        fadeOutPopup(this, fadeIn, fadeOut, body);",
+			"                    }",
+			"                });",
+			"",
+			"                window.addEventListener('keyup', function (e) {",
+			"                    if (e.keyCode == 27 && popupContainer.classList.contains(fadeInClass)) {",
+			"                        fadeOutPopup(popupContainer, fadeIn, fadeOut, body);",
+			"                    }",
+			"                });",
+			"            }",
+			"",
+			"            launchPopup('${1:standart}-popup__btn', '${1:standart}-popup__container', '${1:standart}-popup__cross', 'body', 'fade-in__custom', 'fade-out__custom');",
+			"",
+			"        });",
+			"    }());",
+			"</script>",
+			"<!-- _____ END: ${1:standart}-popup _____ -->"
+		],
+		"description": "popup standart"
+	},
+	// btn-radiation
+	"btn-radiation-html": {
+		"prefix": "btn-r",
+		"scope": "html",
+		"body": [
+			"<a href=\"$0\" class=\"btn-radiation\">",
+			"   ${1:Подробнее}",
+			"</a>",
+		],
+		"description": "btn-radiation-html"
+	},
+	"btn-radiation-css": {
+		"prefix": "btn-r",
+		"scope": "css",
+		"body": [
+			".$0btn-radiation {",
+			"   background: ${1:#4AB1E5};",
+			"   border: 1px solid ${1:#4AB1E5};",
+			"   border-radius: 40px;",
+			"   padding: .8rem 2rem;",
+			"   color: white;",
+			"   transition: all .5s ease-in-out;",
+			"   z-index: 2;",
+			"   display: inline-flex;",
+			"   text-decoration: none;",
+			"}",
+			"",
+			".$0btn-radiation:hover {",
+			"   border: 1px solid ${1:#4AB1E5};",
+			"   background: #ffffff00;",
+			"   transform: scale(1.02);",
+			"   color: ${1:#4AB1E5};",
+			"}",
+		],
+		"description": "btn-radiation-css"
+	},
+	// btn-quadro
+	"btn-quadro-html": {
+		"prefix": "btn-q",
+		"scope": "html",
+		"body": [
+			"<a href=\"$0\" class=\"btn-quadro\">",
+			"   ${1:Подробнее}",
+			"</a>",
+		],
+		"description": "btn-quadro-html"
+	},
+	"btn-quadro-css": {
+		"prefix": "btn-q",
+		"scope": "css",
+		"body": [
+			".$0btn-quadro {",
+			"   background: ${1:#4AB1E5};",
+			"   border: 1px solid ${1:#4AB1E5};",
+			"   padding: .8rem 2rem;",
+			"   color: white;",
+			"   transition: all .5s ease-in-out;",
+			"   z-index: 2;",
+			"   display: inline-flex;",
+			"   text-decoration: none;",
+			"}",
+			"",
+			".$0btn-quadro:hover {",
+			"   border: 1px solid ${1:#4AB1E5};",
+			"   background: #ffffff00;",
+			"   transform: scale(1.02);",
+			"   color: ${1:#4AB1E5};",
+			"}",
+		],
+		"description": "btn-quadro-css"
+	},
+	// btn-wave
+	"btn-wave-html": {
+		"prefix": "btn-w",
+		"scope": "html",
+		"body": [
+			"<a href=\"$0\" class=\"btn-wave\">",
+			"   ${1:Подробнее}",
+			"</a>",
+		],
+		"description": "btn-wave-html"
+	},
+	"btn-wave-css": {
+		"prefix": "btn-w",
+		"scope": "css",
+		"body": [
+			".btn-wave {",
+			"    display: inline-flex;",
+			"    background: ${0:#2574C0};",
+			"    padding: 20px 60px;",
+			"    transition: all .5s ease-in-out;",
+			"    background-position: 0% 100%;",
+			"    background-size: 0%;",
+			"    background-repeat: no-repeat;",
+			"    font-style: normal;",
+			"    font-weight: bold;",
+			"    font-size: 18px;",
+			"    line-height: normal;",
+			"    text-transform: uppercase;",
+			"    color: white;",
+			"}",
+			"",
+			".btn-wave:hover {",
+			"    transform: scale(1.02);",
+			"    background: linear-gradient(90deg, transparent, ${0:#2574C0});",
+			"    background-size: 100%;",
+			"    background-repeat: no-repeat;",
+			"    text-decoration: none;",
+			"    color: white;",
+			"}"
+		],
+		"description": "btn-wave-css"
+	},
+	// preloader
+	"preloader": {
+		"prefix": "pr",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: preloader _____ -->",
+			"<div class=\"preloader\">",
+			"   <div class=\"preloader__row\">",
+			"      <div class=\"preloader__item\"></div>",
+			"      <div class=\"preloader__item\"></div>",
+			"   </div>",
+			"</div>",
+			"<style>",
+			"   .preloader {",
+			"      position: fixed;",
+			"      left: 0;",
+			"      top: 0;",
+			"      right: 0;",
+			"      bottom: 0;",
+			"      background: white;",
+			"      z-index: 1001;",
+			"   }",
+			"",
+			"   .preloader__row {",
+			"       position: relative;",
+			"       top: 50%;",
+			"       left: 50%;",
+			"       width: 70px;",
+			"       height: 70px;",
+			"       margin-top: -35px;",
+			"       margin-left: -35px;",
+			"       text-align: center;",
+			"       animation: preloader-rotate 2s infinite linear;",
+			"   }",
+			"",
+			"   .preloader__item {",
+			"      position: absolute;",
+			"      display: inline-block;",
+			"      top: 0;",
+			"      background-color: #E41710;",
+			"      border-radius: 100%;",
+			"      width: 35px;",
+			"      height: 35px;",
+			"      animation: preloader-bounce 2s infinite ease-in-out;",
+			"   }",
+			"",
+			"   .preloader__item:last-child {",
+			"      top: auto;",
+			"      bottom: 0;",
+			"      animation-delay: -1s;",
+			"   }",
+			"",
+			"   @keyframes preloader-rotate {",
+			"      100% {",
+			"         transform: rotate(360deg);",
+			"      }",
+			"   }",
+			"",
+			"   @keyframes preloader-bounce {",
+			"",
+			"   0%,",
+			"   100% {",
+			"      transform: scale(0);",
+			"   }",
+			"",
+			"   50% {",
+			"      transform: scale(1);",
+			"   }",
+			"   }",
+			"",
+			"   .loaded_hiding .preloader {",
+			"      transition: 1s opacity;",
+			"      opacity: 0;",
+			"   }",
+			"",
+			"   .loaded .preloader {",
+			"      display: none;",
+			"   }",
+			"</style>",
+			"<script>",
+			"   window.onload = function () {",
+			"      document.body.classList.add('loaded_hiding');",
+			"      window.setTimeout(function () {",
+			"         document.body.classList.add('loaded');",
+			"         document.body.classList.remove('loaded_hiding');",
+			"      }, 1500);",
+			"   }",
+			"</script>",
+			"<!-- _____ END: promo-preloader _____ -->"
+		],
+		"description": "notification clip"
+	},
+	// floating-elements
+	"floating-elements": {
+		"prefix": "fe",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: floating elements _____ -->",
+			"<div class=\"floating-elements\"></div>",
+			"<!-- _____ END: floating elements _____ -->",
+			"<script>",
+			"   /* -------- BEGIN: floating elements -------- */",
+			"   const floatingElements = document.querySelectorAll('.floating-elements');",
+			"",
+			"   function getRandomInt(min, max) {",
+			"      return Math.floor(Math.random() * (max - min)) + min;",
+			"   }",
+			"   function moving (nodeList, speed) {",
+			"      window.addEventListener('mousemove', (e) => {",
+			"         let x = Math.floor((e.pageX)/speed - 20) + \"px\";",
+			"         let y = Math.floor((e.pageY)/speed) + \"px\";",
+			"         nodeList.style.transform = 'translate('+x+' , '+y+')';",
+			"      });",
+			"   }",
+			"   function moveAll (nodeList) {",
+			"      // ъ-- Чем больше значение скорости, тем медленнее --ъ",
+			"      // 1. Вариант с детальной настройкой скорости",
+			"      moving(nodeList[0], 60);",
+			"      moving(nodeList[1], 40);",
+			"      moving(nodeList[2], 60);",
+			"      moving(nodeList[3], 60);",
+			"      moving(nodeList[4], 60);",
+			"      moving(nodeList[5], 40);",
+			"      moving(nodeList[6], 60);",
+			"   ",
+			"   ",
+			"      // 2. Вариант с рандомной настройкой скорости",
+			"      // nodeList.forEach(elem => {",
+			"      //    moving(elem, getRandomInt(40, 60));",
+			"      // });",
+			"   }",
+			"   moveAll(floatingElements);",
+			"   /* -------- END: floating elements -------- */",
+			"</script>"
+		],
+		"description": "floating-elements"
+	},
+	// notification clip
+	"notification clip": {
+		"prefix": "nc",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: Notification-clip _____ -->",
+			"<style>",
+			"   .notification-clip {",
+			"      display: none;",
+			"   }",
+			"   @media all and (max-height: 500px) {",
+			"      .notification-clip {",
+			"      width: 100%;",
+			"      height: 100%;",
+			"      position: fixed;",
+			"      top: 0;",
+			"      bottom: 0;",
+			"      left: 0;",
+			"      right: 0;",
+			"      display: flex;",
+			"      justify-content: center;",
+			"      align-items: center;",
+			"      z-index: 2000;",
+			"      background-color: white;",
+			"      color: #E94540;",
+			"      font-size: 30px;",
+			"      font-weight: bold;",
+			"      }",
+			"   }",
+			"</style>",
+			"<div class=\"notification-clip\">",
+			"   Переверните экран",
+			"</div>",
+			"<!-- _____ END: Notification-clip _____ -->"
+		],
+		"description": "notification clip"
+	},
+	// SlickSlider
+	"SlickSlider": {
+		"prefix": "slick",
+		"scope": "html",
+		"body": [
+			"<style>",
+			"    .${0:sl-slider} img {",
+			"        object-fit: contain;",
+			"        width: 100%;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-dots button:before {",
+			"        transition: all 1s ease-in-out;",
+			"        line-height: 21px;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-dots li button:hover:before,",
+			"    .${0:sl-slider} .slick-dots li button:focus:before {",
+			"        color: #2574C0;",
+			"        opacity: .75;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-dots li.slick-active button:before {",
+			"        color: #2574C0;",
+			"        opacity: 1;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-arrow {",
+			"        border-bottom: 2px solid #2574C0;",
+			"        border-right: 2px solid #2574C0;",
+			"        width: 30px;",
+			"        height: 30px;",
+			"        transition: all 1s ease-in-out;",
+			"        opacity: 0.8;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-arrow:hover {",
+			"        opacity: 1;",
+			"        border-bottom: 2px solid #2574C0;",
+			"        border-right: 2px solid #2574C0;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-arrow::before {",
+			"        content: '';",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-prev {",
+			"        transform: rotate(135deg);",
+			"        left: -20px !important;",
+			"    }",
+			"    ",
+			"    .${0:sl-slider} .slick-next {",
+			"        transform: rotate(-45deg);",
+			"        right: -20px !important;",
+			"    }",
+			"</style>",
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"slick/slick.css\"/>",
+				"<link rel=\"stylesheet\" type=\"text/css\" href=\"slick/slick-theme.css\"/>",
+			"<div class=\"${0:sl-slider}\">",
+			"   <div class=\"${0:sl-slider}__item\"></div>",
+			"   <div class=\"${0:sl-slider}__item\"></div>",
+			"   <div class=\"${0:sl-slider}__item\"></div>",
+			"</div>",
+			"<!-- <script type=\"text/javascript\" src=\"//code.jquery.com/jquery-1.11.0.min.js\"></script> Не забыть JQuery -->",
+			"<script src=\"slick/slick.min.js\"></script>",
+			"<script>",
+			"   $(document).ready(function(){",
+			"       $('.${0:sl-slider}').slick({",
+			"            dots: false,",
+			"            infinite: true,",
+			"            speed: 1700,",
+			"            arrows: true,",
+			"            slidesToShow: 1,",
+			"            slidesToScroll: 1,",
+			"            autoplay: true,",
+			"            autoplaySpeed: 4000,",
+			"            responsive: [",
+			"               {",
+			"               breakpoint: 992,",
+			"               settings: {",
+			"                   dots: true,",
+			"                   arrows: false,",
+			"               }",
+			"               },",
+			"               {",
+			"               breakpoint: 767,",
+			"               settings: {",
+			"                   dots: true,",
+			"               }",
+			"               },",
+			"               {",
+			"               breakpoint: 575,",
+			"               settings: {",
+			"                   dots: true,",
+			"                   adaptiveHeight: true,",
+			"               }",
+			"            }",
+			"         ]",
+			"      });",
+			"   });",
+			"</script>"
+		],
+		"description": "SlickSlider"
+	},
+	"FancyBox": {
+		"prefix": "fancy",
+		"scope": "html",
+		"body": [
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"jquery.fancybox.min.css\">",
+			"<a href=\"image.jpg\" data-fancybox${0:=\"gallery\"} data-caption=\"Caption for single image\">",
+			"   <img src=\"thumbnail.jpg\" alt=\"\" />",
+			"</a>",
+			"<!-- <script src=\"https://code.jquery.com/jquery-3.4.1.min.js\"></script> Не забыть JQuery -->",
+			"<script src=\"jquery.fancybox.min.js\"></script>",
+		],
+		"description": "FancyBox"
+	},
+
+
+	"fullpage.js": {
+		"prefix": "fullpage",
+		"scope": "html",
+		"body": [
+			"<!-- Fullpage.js-2.9.7 - last free version -->",
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"jquery.fullPage.css\" />",
+			"<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>",
+			"<script type=\"text/javascript\" src=\"jquery.fullPage.js\"></script>",
+			"<style>",
+			"   /* -------- BEGIN: Эффект Fade - доработка fullpage.js -------- */",
+			"   .fullpage-wrapper {",
+			"   width: 100%!important;",
+			"   transform: none!important;",
+			"   }",
+			"",
+			"   .fp-section {",
+			"   width: 100%!important;",
+			"   position: absolute;",
+			"   left: 0;",
+			"   top: 0;",
+			"   visibility: hidden;",
+			"   opacity: 0;",
+			"   transition: all 1s ease-in-out;",
+			"   }",
+			"",
+			"   .fp-section.active {",
+			"   visibility: visible;",
+			"   opacity: 1;",
+			"   }",
+			"   /* слайды */",
+			"   .fp-slidesContainer {",
+			"   width: 100%!important;",
+			"   transform: none!important;",
+			"   }",
+			"",
+			"   .fp-slide {",
+			"   width: 100%!important;",
+			"   position: absolute;",
+			"   left: 0;",
+			"   top: 0;",
+			"   visibility: hidden;",
+			"   opacity: 0;",
+			"   transition: all 1s ease-in-out;",
+			"   }",
+			"",
+			"   .fp-slide.active {",
+			"   visibility: visible;",
+			"   opacity: 1;",
+			"   }",
+			"   /* -------- END: Эффект Fade - доработка fullpage.js -------- */",
+			"</style>",
+			"<div id=\"fullpage\">",
+			"   <div class=\"section\">Some section</div>",
+			"   <div class=\"section\">Some section</div>",
+			"   <div class=\"section\">Some section</div>",
+			"   <div class=\"section\">Some section</div>",
+			"</div>",
+			"<script>",
+			"$(document).ready(function() {",
+			"   $('#fullpage').fullpage({",
+			"",
+			"      //Navigation",
+			"      menu: '#menu',",
+			"      lockAnchors: false,",
+			"      anchors:['firstPage', 'secondPage'],",
+			"      navigation: false,",
+			"      navigationPosition: 'right',",
+			"      navigationTooltips: ['firstSlide', 'secondSlide'],",
+			"      showActiveTooltip: false,",
+			"      slidesNavigation: false,",
+			"      slidesNavPosition: 'bottom',",
+			"",
+			"      //Scrolling",
+			"      css3: true,",
+			"      scrollingSpeed: 700,",
+			"      autoScrolling: true,",
+			"      fitToSection: true,",
+			"      fitToSectionDelay: 1000,",
+			"      scrollBar: false,",
+			"      easing: 'easeInOutCubic',",
+			"      easingcss3: 'ease',",
+			"      loopBottom: false,",
+			"      loopTop: false,",
+			"      loopHorizontal: true,",
+			"      continuousVertical: false,",
+			"      continuousHorizontal: false,",
+			"      scrollHorizontally: false,",
+			"      interlockedSlides: false,",
+			"      dragAndMove: false,",
+			"      offsetSections: false,",
+			"      resetSliders: false,",
+			"      fadingEffect: false,",
+			"      normalScrollElements: '#element1, .element2',",
+			"      scrollOverflow: false,",
+			"      scrollOverflowReset: false,",
+			"      scrollOverflowOptions: null,",
+			"      touchSensitivity: 15,",
+			"      normalScrollElementTouchThreshold: 5,",
+			"      bigSectionsDestination: null,",
+			"",
+			"      //Accessibility",
+			"      keyboardScrolling: true,",
+			"      animateAnchor: true,",
+			"      recordHistory: true,",
+			"",
+			"      //Design",
+			"      controlArrows: true,",
+			"      verticalCentered: true,",
+			"      sectionsColor : ['#ccc', '#fff'],",
+			"      paddingTop: '3em',",
+			"      paddingBottom: '10px',",
+			"      fixedElements: '#header, .footer',",
+			"      responsiveWidth: 0,",
+			"      responsiveHeight: 0,",
+			"      responsiveSlides: false,",
+			"      parallax: false,",
+			"      parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},",
+			"",
+			"      //Custom selectors",
+			"      sectionSelector: '.section',",
+			"      slideSelector: '.slide',",
+			"",
+			"      lazyLoading: true,",
+			"",
+			"      //events",
+			"      onLeave: function(index, nextIndex, direction){},",
+			"      afterLoad: function(anchorLink, index){},",
+			"      afterRender: function(){},",
+			"      afterResize: function(){},",
+			"      afterResponsive: function(isResponsive){},",
+			"      afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},",
+			"      onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}",
+			"   });",
+			"});",
+			"</script>"
+		],
+		"description": "fullpage.js"
+	},
+
+
+
+
+	"tabs-standart": {
+		"prefix": "tabs",
+		"scope": "html",
+		"body": [
+			"<!-- _____ BEGIN: Tabs-standart _____ -->",
+			"<style>",
+			"    .${1:standart}-tab__cont {",
+			"        display: flex;",
+			"        flex-direction: column;",
+			"        width: 300px;",
+			"    }",
+			"",
+			"    .${1:standart}-tab__node-list-cont {",
+			"        display: flex;",
+			"        margin-bottom: 10px;",
+			"    }",
+			"",
+			"    .${1:standart}-tab__btn {",
+			"        color: #9912a2a8;",
+			"        border: 1px solid #9912a2a8;",
+			"        padding: .8rem 3rem;",
+			"        transition: all 1s;",
+			"        z-index: 10;",
+			"        cursor: pointer;",
+			"        margin-right: 2px;",
+			"    }",
+			"",
+			"    .${1:standart}-tab__btn:hover {",
+			"        border: 1px solid #9812a262;",
+			"        background: #9812a262;",
+			"        color: white;",
+			"    }",
+			"",
+			"    .${1:standart}-tab__active-class {",
+			"        background: #9912a2a8;",
+			"        color: white;",
+			"    }",
+			"",
+			"    .${1:standart}-tab__active-class:hover {",
+			"        border: 1px solid #9912a2a8;",
+			"        background: #9912a2a8;",
+			"        color: white;",
+			"    }",
+			"",
+			"    .${1:standart}-block__node-list {",
+			"        display: none;",
+			"    }",
+			"",
+			"    .${1:standart}-block__active-class {",
+			"        display: block !important;",
+			"    }",
+			"</style>",
+			"<div class=\"${1:standart}-tab__cont\">",
+			"    <div class=\"${1:standart}-tab__node-list-cont\">",
+			"        <div class=\"${1:standart}-tab__btn ${1:standart}-tab__active-class\">",
+			"            1 таб",
+			"        </div>",
+			"        <div class=\"${1:standart}-tab__btn\">",
+			"            2 таб",
+			"        </div>",
+			"    </div>",
+			"    <div class=\"${1:standart}-block__node-list-cont\">",
+			"        <div class=\"${1:standart}-block__node-list ${1:standart}-block__active-class\">",
+			"            111 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt nobis a doloremque rem numquaquo\",",
+			"            nisi,",
+			"            reiciendis provident aliquid aut dolorem, officia, ullam fuga itaque sed? Eligendi, omniquibusdam\",",
+			"            voluptatibus consectetur cupiditate officiis iste beatae, culpa odio illo natus. At ratione eillum\",",
+			"            omnis, molestiae magnam. Eaque minus itaque ipsam.",
+			"        </div>",
+			"        <div class=\"${1:standart}-block__node-list\">",
+			"            222 Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, voluptate ipsa optio repellendus, laudantium nulla maxime deserunt et dolore explicabo possimus nesciunt quasi placeat facilis sint incidunt, officia libero culpa in. Minus inventore corporis quia, accusamus nemo recusandae asperiores porro.",
+			"        </div>",
+			"    </div>",
+			"</div>",
+			"<script>",
+			"    (function () {",
+			"        document.addEventListener(\"DOMContentLoaded\", (e) => {",
+			"",
+            "            function launchTabs(tabNodeListSelector, tabActiveClass, blockNodeListSelector, blockActiveClass) {",
+            "                const arrTabNodeList = Array.from(document.querySelectorAll(tabNodeListSelector)),",
+            "                      arrBlockNodeList = Array.from(document.querySelectorAll(blockNodeListSelector));",
+			"",
+            "                function removeActiveClass(nodeList, activeClass) {",
+            "                    nodeList.forEach(elem => {",
+            "                        if (elem.classList.contains(activeClass)) {",
+            "                            elem.classList.remove(activeClass);",
+            "                        }",
+            "                    });",
+            "                }",
+			"",
+            "                for (let i = 0; i < arrTabNodeList.length; i++) {",
+            "                    arrTabNodeList[i].addEventListener('click', function () {",
+            "                        removeActiveClass(arrTabNodeList, tabActiveClass);",
+            "                        removeActiveClass(arrBlockNodeList, blockActiveClass);",
+            "                        this.classList.add(tabActiveClass);",
+            "                        arrBlockNodeList[i].classList.add(blockActiveClass);",
+            "                    });",
+            "                }",
+            "            }",
+			"",
+			"            launchTabs('.${1:standart}-tab__btn', '${1:standart}-tab__active-class', '.${1:standart}-block__node-list', '${1:standart}-block__active-class');",
+			"",
+			"        });",
+			"    }());",
+			"</script>",
+			"<!-- _____ END: Tabs-standart _____ -->"
+		],
+		"description": "tabs-standart"
+	},
+
+
+
+	// plus
+	"plus": {
+		"prefix": "plus",
+		"scope": "html",
+		"body": [
+			"<div class=\"plus\">",
+			"   <div class=\"vert\"></div>",
+			"   <div class=\"goriz\"></div>",
+			"</div>",
+			"<style>",
+			"   .plus {",
+			"      width: 22px;",
+			"      height: 22px;",
+			"      display: flex;",
+			"      justify-content: center;",
+			"      align-items: center;",
+			"      position: relative;",
+			"   }",
+			"",
+			"   .vert {",
+			"      width: 3px;",
+			"      height: 100%;",
+			"      background: #3AB9D8;",
+			"      position: absolute;",
+			"      margin-left: 1px;",
+			"   }",
+			"",
+			"   .goriz {",
+			"      height: 3px;",
+			"      width: 100%;",
+			"      background: #3AB9D8;",
+			"      position: absolute;",
+			"      margin-top: 1px;",
+			"   }",
+			"</style>"
+		],
+		"description": "plus"
+	},
+
+	// minus
+	"minus": {
+		"prefix": "minus",
+		"scope": "html",
+		"body": [
+			"<div class=\"minus\">",
+			"    <div class=\"goriz\"></div>",
+			"</div>",
+			"<style>",
+			"    .minus {",
+			"        width: 22px;",
+			"        height: 22px;",
+			"        display: flex;",
+			"        justify-content: center;",
+			"        align-items: center;",
+			"        position: relative;",
+			"    }",
+			"",
+			"    .goriz {",
+			"        height: 3px;",
+			"        width: 100%;",
+			"        background: #3AB9D8;",
+			"        position: absolute;",
+			"        margin-top: 1px;",
+			"    }",
+			"</style>"
+		],
+		"description": "minus"
+	},
+
+	// accordion standart
+	"accordion standart": {
+			"prefix": "accordion",
+			"scope": "html",
+			"body": [
+				"<!-- _____ BEGIN: accordion-standart _____ -->",
+				"<style>",
+				"    .${1:standart}-accordion__btn {",
+				"        display: flex;",
+				"        justify-content: space-between;",
+				"        align-items: center;",
+				"        height: 90px;",
+				"        border-left: 2px solid #D3AB31;",
+				"        border-right: 2px solid #D3AB31;",
+				"        border-top: 2px solid #D3AB31;",
+				"        box-sizing: border-box;",
+				"        padding: 30px 20px;",
+				"        cursor: pointer;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__title {",
+				"        margin: 0;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__symbol {",
+				"        transition: all 1s ease-in-out;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__btn:hover .${1:standart}-accordion__symbol {",
+				"        transform: scale(1.3);",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__btn:hover .plus .vert,",
+				"    .${1:standart}-accordion__btn:hover .plus .goriz {",
+				"        background: #D3AB31;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item:last-of-type .${1:standart}-accordion__btn {",
+				"        border-bottom: 2px solid #D3AB31;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item_active .${1:standart}-accordion__btn {",
+				"        background: #2574C0;",
+				"        border: 1px solid #2574C0 !important;",
+				"        cursor: pointer;",
+				"    }",
+				"    ",
+				"    .${1:standart}-accordion__item_active .${1:standart}-accordion__title {",
+				"        color: #FFFFFF;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item_active .minus {",
+				"        display: flex;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item_active .plus {",
+				"        display: none;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item_active .vert,",
+				"    .${1:standart}-accordion__item_active .goriz {",
+				"        background: white;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__item_active .${1:standart}-accordion__content {",
+				"        display: block;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__title {",
+				"        font-style: normal;",
+				"        font-weight: 500;",
+				"        font-size: 30px;",
+				"        line-height: 117%;",
+				"        color: #2574C0;",
+				"        margin-bottom: 0;",
+				"        padding-right: 10px;",
+				"    }",
+				"",
+				"    .plus {",
+				"        width: 22px;",
+				"        height: 22px;",
+				"        display: flex;",
+				"        justify-content: center;",
+				"        align-items: center;",
+				"        position: relative;",
+				"        transition: all 1s ease-in-out;",
+				"    }",
+				"",
+				"    .vert {",
+				"        width: 3px;",
+				"        height: 100%;",
+				"        background: #2574C0;",
+				"        position: absolute;",
+				"        margin-left: 1px;",
+				"        transition: all 1s ease-in-out;",
+				"    }",
+				"",
+				"    .goriz {",
+				"        height: 3px;",
+				"        width: 100%;",
+				"        background: #2574C0;",
+				"        position: absolute;",
+				"        margin-top: 1px;",
+				"        transition: all 1s ease-in-out;",
+				"    }",
+				"",
+				"    .minus {",
+				"        width: 22px;",
+				"        height: 22px;",
+				"        display: flex;",
+				"        justify-content: center;",
+				"        align-items: center;",
+				"        position: relative;",
+				"        display: none;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__content {",
+				"        padding: 20px;",
+				"        display: none;",
+				"    }",
+				"",
+				"    .${1:standart}-accordion__content p {",
+				"        font-style: normal;",
+				"        font-weight: normal;",
+				"        font-size: 22px;",
+				"        line-height: 26px;",
+				"        color: #16181B;",
+				"        margin: 0;",
+				"    }",
+				"",
+				"    .animation__emergence_right {",
+				"        animation-duration: 1s;",
+				"        animation-name: emergence-right;",
+				"        opacity: 1 !important;",
+				"    }",
+				"",
+				"    @keyframes emergence-right {",
+				"        from {",
+				"            transform: translate(70px, 0px);",
+				"            opacity: 0;",
+				"        }",
+				"",
+				"        to {",
+				"            transform: translate(0px, 0px);",
+				"            opacity: 1;",
+				"        }",
+				"    }",
+				"",
+				"    .animation__emergence_left {",
+				"        animation-duration: 1s;",
+				"        animation-name: emergence-left;",
+				"        opacity: 1 !important;",
+				"    }",
+				"",
+				"    @keyframes emergence-left {",
+				"        from {",
+				"            transform: translate(-70px, 0px);",
+				"            opacity: 0;",
+				"        }",
+				"",
+				"        to {",
+				"            transform: translate(0px, 0px);",
+				"            opacity: 1;",
+				"        }",
+				"    }",
+				"",
+				"    @media all and (max-width: 991px) {",
+				"        .${1:standart}-accordion__title {",
+				"            font-size: 22px;",
+				"        }",
+				"",
+				"        .${1:standart}-accordion__content p {",
+				"            font-size: 20px;",
+				"        }",
+				"    }",
+				"    ",
+				"    @media all and (max-width: 767px) {",
+				"        .${1:standart}-accordion__btn {",
+				"            height: auto;",
+				"        }",
+				"",
+				"        .${1:standart}-accordion__content p {",
+				"            font-size: 16px;",
+				"        }",
+				"",
+				"        .${1:standart}-accordion__title {",
+				"            font-size: 18px;",
+				"        }",
+				"    }",
+				"    ",
+				"    @media all and (max-width: 575px) {",
+				"        .${1:standart}-accordion__title {",
+				"            font-size: 16px;",
+				"        }",
+				"",
+				"        .${1:standart}-accordion__content {",
+				"            padding: 10px;",
+				"        }",
+				"",
+				"        .${1:standart}-accordion__btn {",
+				"            padding: 15px;",
+				"        }",
+				"    }",
+				"</style>",
+				"<div class=\"${1:standart}-accordion\">",
+				"    <div class=\"${1:standart}-accordion__item ${1:standart}-accordion__item_active\">",
+				"        <div class=\"${1:standart}-accordion__btn\">",
+				"            <h6 class=\"${1:standart}-accordion__title\">",
+				"                1. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, facilis!",
+				"            </h6>",
+				"            <div class=\"${1:standart}-accordion__symbol\">",
+				"                <div class=\"plus\">",
+				"                    <div class=\"vert\"></div>",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"                <div class=\"minus\">",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"            </div>",
+				"        </div>",
+				"        <div class=\"${1:standart}-accordion__content\">",
+				"            <p>",
+				"                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque nihil eius sapiente",
+				"                magnam",
+				"                voluptatem ea debitis ducimus esse id, ullam fugiat tenetur ex necessitatibus iure facere",
+				"                voluptas",
+				"                quidem? Tempore illo, dolores cumque tempora itaque dignissimos quasi. Fugit temporibus",
+				"                accusamus,",
+				"                ducimus corporis vitae doloribus voluptate reiciendis optio repellendus, itaque qui.",
+				"            </p>",
+				"        </div>",
+				"    </div>",
+				"    <div class=\"${1:standart}-accordion__item\">",
+				"        <div class=\"${1:standart}-accordion__btn\">",
+				"            <h6 class=\"${1:standart}-accordion__title\">",
+				"                2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, facilis!",
+				"            </h6>",
+				"            <div class=\"${1:standart}-accordion__symbol\">",
+				"                <div class=\"plus\">",
+				"                    <div class=\"vert\"></div>",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"                <div class=\"minus\">",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"            </div>",
+				"        </div>",
+				"        <div class=\"${1:standart}-accordion__content\">",
+				"            <p>",
+				"                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque nihil eius sapiente",
+				"                magnam",
+				"                voluptatem ea debitis ducimus esse id, ullam fugiat tenetur ex necessitatibus iure facere",
+				"                voluptas",
+				"                quidem? Tempore illo, dolores cumque tempora itaque dignissimos quasi. Fugit temporibus",
+				"                accusamus,",
+				"                ducimus corporis vitae doloribus voluptate reiciendis optio repellendus, itaque qui.",
+				"            </p>",
+				"        </div>",
+				"    </div>",
+				"    <div class=\"${1:standart}-accordion__item\">",
+				"        <div class=\"${1:standart}-accordion__btn\">",
+				"            <h6 class=\"${1:standart}-accordion__title\">",
+				"                3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, facilis!",
+				"            </h6>",
+				"            <div class=\"${1:standart}-accordion__symbol\">",
+				"                <div class=\"plus\">",
+				"                    <div class=\"vert\"></div>",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"                <div class=\"minus\">",
+				"                    <div class=\"goriz\"></div>",
+				"                </div>",
+				"            </div>",
+				"        </div>",
+				"        <div class=\"${1:standart}-accordion__content\">",
+				"            <p>",
+				"                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eaque nihil eius sapiente",
+				"                magnam",
+				"                voluptatem ea debitis ducimus esse id, ullam fugiat tenetur ex necessitatibus iure facere",
+				"                voluptas",
+				"                quidem? Tempore illo, dolores cumque tempora itaque dignissimos quasi. Fugit temporibus",
+				"                accusamus,",
+				"                ducimus corporis vitae doloribus voluptate reiciendis optio repellendus, itaque qui.",
+				"            </p>",
+				"        </div>",
+				"    </div>",
+				"</div>",
+				"<script>",
+				"    (function () {",
+				"        document.addEventListener(\"DOMContentLoaded\", (e) => {",
+				"",
+				"            function accordionShowAndHide(accordionItemNodeList, accordionItemActiveClass, accordionAnimationClass, targetElem) {",
+				"                accordionItemNodeList.forEach(elem => {",
+				"                    if (elem != targetElem) {",
+				"                        if (elem.classList.contains(accordionItemActiveClass)) {",
+				"                            elem.classList.remove(accordionItemActiveClass);",
+				"                        }",
+				"                    }",
+				"                });",
+				"                targetElem.classList.toggle(accordionItemActiveClass);",
+				"                targetElem.children[1].classList.add(accordionAnimationClass);",
+				"            }",
+				"",
+				"            function launchAccordion(accordionItemNodeListClass, accordionItemActiveClass, accordionAnimationClass) {",
+				"                const accordionItemNodeList = document.querySelectorAll(`.\\${accordionItemNodeListClass}`);",
+				"                accordionItemNodeList.forEach(elem => {",
+				"                    elem.addEventListener('click', function (e) {",
+				"                        accordionShowAndHide(accordionItemNodeList, accordionItemActiveClass, accordionAnimationClass, this);",
+				"                    });",
+				"                });",
+				"            }",
+				"",
+				"            launchAccordion('${1:standart}-accordion__item', '${1:standart}-accordion__item_active', 'animation__emergence_right');",
+				"            ",
+				"        });",
+				"    }());",
+				"</script>",
+				"<!-- _____ END: accordion-standart _____ -->"
+			],
+			"description": "accordion standart"
+		},
+}
+
+
+
+
