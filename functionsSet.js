@@ -34,6 +34,15 @@ class FunctionsSet {
         }
     }
 
+    static localStorage = {
+        setLocalStorageItem(key, value) {
+            localStorage.setItem(key, value)
+        },
+        getLocalStorageItemValue(key) {
+            return localStorage.getItem(key)
+        }
+    }
+
     setScrollAnimations(imgArray, evenClassName, oddClassName) {
         for (let i = 0; i < imgArray.length; i++) {
             if (!imgArray[i].classList.contains(oddClassName) || !imgArray[i].classList.contains(evenClassName)) {
@@ -45,6 +54,52 @@ class FunctionsSet {
             }
         }
     }
+
+    insertSubstr(str, substr, pos) {
+        if (str != NaN) {
+            str = String(str);
+        }
+        let array = str.split('');
+        array.splice(pos, 0, substr);
+        return array.join('');
+    }
+
+    cutDotAndZeros(objProperty) {
+        return objProperty.slice(0, objProperty.indexOf('.'));
+    }
+
+    renderBlocksBySelector(selectorName, position, htmlBlock) {
+        const nodeList = document.querySelectorAll(${selectorName});
+        nodeList.forEach(elem => {
+            elem.insertAdjacentHTML(position, htmlBlock);
+        });
+    }
+
+    getCoords(elem) {
+        let box = elem.getBoundingClientRect();
+        return {
+            top: box.top + window.pageYOffset,
+            right: box.right + window.pageXOffset,
+            bottom: box.bottom + window.pageYOffset,
+            left: box.left + window.pageXOffset
+        };
+    }
+
+    startAnimation(elem, startAnimationClass, endAnimationClass) {
+        if (elem.classList.contains(endAnimationClass)) {
+            elem.classList.remove(endAnimationClass);
+        }
+        elem.classList.add(startAnimationClass);
+    }
+
+    endAnimation(elem, startAnimationClass, endAnimationClass) {
+        if (elem.classList.contains(startAnimationClass)) {
+            elem.classList.remove(startAnimationClass);
+        }
+        elem.classList.add(endAnimationClass);
+    }
+
+
 }
 
 export default FunctionsSet;
