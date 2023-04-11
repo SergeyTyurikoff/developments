@@ -1,4 +1,6 @@
 class FunctionsSet {
+    logsOn = true;
+
     static form = {
         changeBtnSubmitText(text, btnSubmitSelector = ".btn-submit") {
             if (document.querySelector(btnSubmitSelector)) {
@@ -97,6 +99,132 @@ class FunctionsSet {
             elem.classList.remove(startAnimationClass);
         }
         elem.classList.add(endAnimationClass);
+    }
+
+    displayLogs(...contentArray) {
+        if (this.logsOn) contentArray.map(item => console.log(item))
+    }
+
+    setSmoothScroll() {
+
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+
+
+                let href = this.getAttribute('href').substring(1);
+
+                const scrollTarget = document.getElementById(href);
+
+                const topOffset = 100;
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
+                const offsetPosition = elementPosition - topOffset;
+
+                window.scrollBy({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    }
+
+    wingConstruction(widthToSelector = '.wing__width-to', side = 'right', stopFunctionWindowWidth = '1199') {
+        if (!document.querySelector('.wing__prototype-wrap')) {
+            document.body.insertAdjacentHTML('afterbegin', `
+        <div class="wing__prototype-wrap">
+            <div class="wrap wing__width-from"></div>
+            <style>
+                .wrap {
+                    margin-right: auto;
+                    margin-left: auto;
+                    padding-left: 15px;
+                    padding-right: 15px
+                }
+
+                @media (min-width: 768px) {
+                    .wrap {
+                        width: 750px
+                    }
+                }
+
+                @media (min-width: 992px) {
+                    .wrap {
+                        width: 970px
+                    }
+                }
+
+                @media (min-width: 1200px) {
+                    .wrap {
+                        width: 1170px
+                    }
+                }
+            </style>
+        </div>
+      `);
+        }
+
+        const widthFrom = document.querySelector('.wing__width-from'),
+            widthTo = document.querySelector(widthToSelector);
+
+        function setWidth(side, stopFunctionWindowWidth, widthFrom, widthTo) {
+            if (window.innerWidth > stopFunctionWindowWidth) {
+                widthTo.style.width = (+widthFrom.offsetWidth + parseFloat(getComputedStyle(widthFrom).marginRight) - 15) + 'px';
+                if (side == 'right') {
+                    widthTo.style.marginLeft = 'auto';
+                } else if (side == 'left') {
+                    widthTo.style.marginRight = 'auto';
+                }
+                if (widthTo.classList.contains('wrap')) {
+                    widthTo.classList.remove('wrap');
+                }
+            } else {
+                widthTo.style = '';
+                if (!widthTo.classList.contains('wrap')) {
+                    widthTo.classList.add('wrap');
+                }
+            }
+        }
+
+        setWidth(side, stopFunctionWindowWidth, widthFrom, widthTo);
+
+        window.addEventListener('resize', () => {
+            setWidth(side, stopFunctionWindowWidth, widthFrom, widthTo);
+        });
+
+    }
+
+
+    async ajaxRequest(path, dataObj = false, jsonOrFormData = 'json', respType = 'json') {
+
+        let rawResponse;
+
+        if (dataObj == false) {
+            rawResponse = await fetch(path);
+        } else {
+            if (jsonOrFormData == 'json') {
+                rawResponse = await fetch(path, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json;charset=UTF-8',
+                    },
+                    body: JSON.stringify(dataObj),
+                });
+            } else if (jsonOrFormData == 'formData') {
+                rawResponse = await fetch(path, {
+                    method: 'POST',
+                    body: dataObj,
+                });
+            }
+        }
+        if (!rawResponse.ok) {
+            throw new Error(`Ошибка, статус: ${rawResponse.status}`);
+        }
+        if (respType == 'json') {
+            return rawResponse.json();
+        } else if (respType == 'text') {
+            return rawResponse.text();
+        }
     }
 
 
