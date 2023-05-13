@@ -1,12 +1,9 @@
-const BtnQuadroHTML = (btnText, reverse, disabled) => {
-    return (
-    `
+export const BtnQuadroHTML = (name, btnText, reverse, disabled) => {
+    return (`
         <button 
-            class="btn-action btn-quadro btn-quadro__${reverse ? 'reverse' : 'standard'}"
+            class="${name}-btn-quadro ${name}-btn-quadro__${reverse ? 'reverse' : 'standard'}"
             ${disabled ? 'disabled' : ''}>
-            ${btnText} 
+            ${btnText}
         </button>
     `);
 }
-
-export {BtnQuadroHTML};

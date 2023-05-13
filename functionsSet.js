@@ -105,6 +105,25 @@ class FunctionsSet {
         if (this.logsOn) contentArray.map(item => console.log(item))
     }
 
+    checkSupport(fn = undefined) {
+        const html = document.documentElement,
+            WebP = new Image();
+
+        WebP.onload = WebP.onerror = function() {
+            const isSupported = (WebP.height === 2);
+
+            if (isSupported) {
+                if (html.className.indexOf('no-webp') >= 0)
+                    html.className = html.className.replace(/\bno-webp\b/, 'webp');
+                else html.className += ' webp';
+            }
+            if (fn) {
+                fn(isSupported);
+            }
+        };
+        WebP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+    }
+
     setSmoothScroll() {
 
         document.querySelectorAll('a[href^="#"]').forEach(link => {

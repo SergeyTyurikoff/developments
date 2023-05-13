@@ -1,10 +1,8 @@
-const BtnQuadroCSS = (color, uppercase) => {
-    // if (document.querySelector(`.BtnQuadroCSS${reverseColor ? 'Reverse' : ''}`)) {
-    //     return false;
-    // }
+export const BtnQuadroCSS = (name, color, uppercase) => {
+
     return (`
-        <style class="BtnQuadroCSS">
-            .btn-quadro {
+        <style class="${name}-btn-quadro-css">
+            .${name}-btn-quadro {
                 border-radius: 3px;
                 padding: 15px 20px;
                 transition: all .5s;
@@ -12,54 +10,49 @@ const BtnQuadroCSS = (color, uppercase) => {
                 font-weight: bold;
                 text-align: center;
                 display: block;
-                margin: 20px auto;
-                min-height: 54px;
-                font: 18px/100% 'PT Sans';
+                font: 18px/100% 'PT Sans', sans-serif;
             }
             
-            .btn-quadro:hover {
+            @media (max-width: 575px) {
+                .${name}-btn-quadro {
+                    padding: 15px 10px;
+                }
+            }
+            
+            .${name}-btn-quadro:hover {
                 text-decoration: none;
             }
             
-            .btn-quadro[disabled] {
-                color: #4BB34B;
-                background: transparent;
-                border: 1px solid #4BB34B;
-            }
-            
-            .btn-quadro[disabled]:hover {
-                color: #4BB34B;
-                background: transparent;
-                border: 1px solid #4BB34B;
-            }
-            
-            .btn-quadro__standard {
+            .${name}-btn-quadro__standard,
+             .${name}-btn-quadro__standard[disabled]:hover {
+                border-radius: 7px;
                 background: ${color};
-                border: 1px solid white;
+                border: 2px solid white;
                 color: white;
                 text-transform: ${uppercase ? 'uppercase' : 'none'};
             }
             
-            .btn-quadro__standard:hover {
-                border: 1px solid ${color};
+            .${name}-btn-quadro__standard:hover {
+                border-radius: 5px;
+                border: 2px solid ${color};
                 background: white;
                 color: ${color};
             }
             
-            .btn-quadro__reverse {
+            .${name}-btn-quadro__reverse,
+             .${name}-btn-quadro__reverse[disabled]:hover {
+                border-radius: 5px;
                 background: white;
-                border: 1px solid ${color};
+                border: 2px solid ${color};
                 color: ${color};
             }
             
-            .btn-quadro__reverse:hover {
-               border: 1px solid white;
+            .${name}-btn-quadro__reverse:hover {
+               border-radius: 7px;
+               border: 2px solid white;
                background: ${color};
                color: white;
             }
-            
         </style>
     `);
 }
-
-export {BtnQuadroCSS};
