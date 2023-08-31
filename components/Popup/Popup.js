@@ -3,7 +3,7 @@ import {PopupHTML} from "./PopupHTML.js";
 
 /**
  **********************************
- ********* Popup V.1.0.0 **********
+ ********* Popup V.1.0.1 **********
  **********************************
  * Конструктор создания popup
  * @constructor
@@ -59,11 +59,11 @@ export class Popup {
             elem.addEventListener('click', (e) => {
                 switch (this.animation.type) {
                     case 'appearance':
-                        this.startAnimation(this.popup, this.appearance, this.disappearance);
-                        this.startAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                        this._startAnimation(this.popup, this.appearance, this.disappearance);
+                        this._startAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
                         break;
                     case 'fade':
-                        this.startAnimation();
+                        this._startAnimation();
                         break;
                 }
             });
@@ -72,11 +72,11 @@ export class Popup {
         this.popupCross.addEventListener('click', (e) => {
             switch (this.animation.type) {
                 case 'appearance':
-                    this.endAnimation(this.popup, this.appearance, this.disappearance);
-                    this.endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                    this._endAnimation(this.popup, this.appearance, this.disappearance);
+                    this._endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
                     break;
                 case 'fade':
-                    this.endAnimation();
+                    this._endAnimation();
                     break;
             }
         });
@@ -85,11 +85,11 @@ export class Popup {
             if (e.target === this.popupContainer) {
                 switch (this.animation.type) {
                     case 'appearance':
-                        this.endAnimation(this.popup, this.appearance, this.disappearance);
-                        this.endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                        this._endAnimation(this.popup, this.appearance, this.disappearance);
+                        this._endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
                         break;
                     case 'fade':
-                        this.endAnimation();
+                        this._endAnimation();
                         break;
                 }
             }
@@ -99,11 +99,11 @@ export class Popup {
             if (e.keyCode === 27 && this.popupContainer.classList.contains(this.fadeIn)) {
                 switch (this.animation.type) {
                     case 'appearance':
-                        this.endAnimation(this.popup, this.appearance, this.disappearance);
-                        this.endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                        this._endAnimation(this.popup, this.appearance, this.disappearance);
+                        this._endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
                         break;
                     case 'fade':
-                        this.endAnimation();
+                        this._endAnimation();
                         break;
                 }
             }
@@ -121,7 +121,7 @@ export class Popup {
         element.insertAdjacentHTML(place, template);
     }
 
-    startAnimation(container = this.popupContainer, animationStart = this.fadeIn, animationEnd = this.fadeOut) {
+    _startAnimation(container = this.popupContainer, animationStart = this.fadeIn, animationEnd = this.fadeOut) {
         if (container.classList.contains(animationEnd)) {
             container.classList.remove(animationEnd);
         }
@@ -129,11 +129,35 @@ export class Popup {
         this.body.style.overflow = 'hidden';
     }
 
-    endAnimation(container = this.popupContainer, animationStart = this.fadeIn, animationEnd = this.fadeOut) {
+    _endAnimation(container = this.popupContainer, animationStart = this.fadeIn, animationEnd = this.fadeOut) {
         if (container.classList.contains(animationStart)) {
             container.classList.remove(animationStart);
         }
         container.classList.add(animationEnd);
         this.body.style.overflow = 'visible';
+    }
+
+    show() {
+        switch (this.animation.type) {
+            case 'appearance':
+                this._startAnimation(this.popup, this.appearance, this.disappearance);
+                this._startAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                break;
+            case 'fade':
+                this._startAnimation();
+                break;
+        }
+    }
+
+    hide() {
+        switch (this.animation.type) {
+            case 'appearance':
+                this._endAnimation(this.popup, this.appearance, this.disappearance);
+                this._endAnimation(this.popupContainer, this.fadeIn, this.fadeOut);
+                break;
+            case 'fade':
+                this._endAnimation();
+                break;
+        }
     }
 }
